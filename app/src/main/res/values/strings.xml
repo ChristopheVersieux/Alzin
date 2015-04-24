@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Guindailles</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="section1">Facultaires</string>
+    <string name="section2">Cercles</string>
+    <string name="section3">Ordres</string>
+    <string name="section4">Pennés</string>
+    <string name="section5">Régionales</string>
+    <string name="section6">Sacrés</string>
+    <string name="section7">Traditionnels du Bitu</string>
+    <string name="loading">Chargement en cours</string>
+    <string name="empty">Pas encore de chants dans cette catégorie</string>
+    <string name="network">Pas de résultat. Etes vous connecté à Internet?</string>
+    <string name="unknown">Une erreur inconnue s\'est produite. Nous mettons tout en oeuvre pour réparer le soucis.</string>
+
+
+</resources>
