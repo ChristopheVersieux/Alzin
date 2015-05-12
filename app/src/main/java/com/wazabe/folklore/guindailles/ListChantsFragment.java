@@ -55,7 +55,7 @@ public class ListChantsFragment extends Fragment {
         }
 
         Ion.with(getActivity())
-                .load("https://www.kimonolabs.com/api/" + getArguments().getString("key") + "?apikey=6VWkomxEx2eH0P9zWbDkvYAJQ6g8P3Sd")
+                .load("http://alzin.byethost33.com/" + getArguments().getString("key"))
                 .as(new TypeToken<ChantApi>() {
                 })
                 .setCallback(new FutureCallback<ChantApi>() {
