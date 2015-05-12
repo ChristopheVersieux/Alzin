@@ -25,7 +25,7 @@ public class DetailActivity extends ActionBarActivity {
         }
         setTitle("Chargement en cours...");
         Ion.with(this)
-                .load("https://www.kimonolabs.com/api/480wksdk?apikey=6VWkomxEx2eH0P9zWbDkvYAJQ6g8P3Sd&kimpath3=" + getIntent().getExtras().getString("url").replace("http://www.guindaille-factory.be/chants/view/", ""))
+                .load("https://www.kimonolabs.com/api/ondemand/480wksdk?apikey=6VWkomxEx2eH0P9zWbDkvYAJQ6g8P3Sd&kimpath3=" + getIntent().getExtras().getString("url").replace("http://www.guindaille-factory.be/chants/view/", ""))
                 .as(new TypeToken<ParoleApi>() {
                 })
                 .setCallback(new FutureCallback<ParoleApi>() {
