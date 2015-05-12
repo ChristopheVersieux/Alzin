@@ -1,7 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/text"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:padding="16dp">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-</TextView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="398dp"
+        android:id="@+id/scrollView"
+        android:layout_gravity="left|top"
+        android:clickable="false"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/bouttonPlay">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:textIsSelectable="false"
+            style="@style/AppTheme" />
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/bouttonPlay"
+        android:layout_gravity="center_horizontal|bottom"
+        android:src="@drawable/play"
+        android:onClick="play"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_marginRight="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignTop="@+id/bouttonPause"
+        android:layout_toLeftOf="@+id/bouttonAvancer"
+        android:layout_toStartOf="@+id/bouttonAvancer" />
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/bouttonPause"
+        android:layout_gravity="left|bottom"
+        android:src="@drawable/pause"
+        android:onClick="pause"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_alignTop="@+id/bouttonRetour"
+        android:layout_toRightOf="@+id/bouttonRetour"
+        android:layout_toEndOf="@+id/bouttonRetour"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="49dp" />
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/bouttonRetour"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/retour"
+        android:onClick="retour"
+        android:adjustViewBounds="true"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/bouttonAvancer"
+        android:layout_alignBottom="@+id/bouttonPlay"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/avancer"
+        android:layout_marginRight="20dp"
+        android:onClick="avancer"
+        />
+
+
+</RelativeLayout>
+

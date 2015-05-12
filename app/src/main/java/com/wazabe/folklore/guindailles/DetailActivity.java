@@ -1,8 +1,10 @@
 package com.wazabe.folklore.guindailles;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
@@ -14,8 +16,14 @@ import com.wazabe.folklore.guindailles.bo.ParoleApi;
  * Created by versieuxchristophe on 08/01/15.
  */
 public class DetailActivity extends ActionBarActivity {
+
+    MediaPlayer mySound;
+    private int forwardTime = 15000;
+    private int timeElapsed = 0, finalTime = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mySound = MediaPlayer.create(this, R.raw.chasseur);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -52,5 +60,35 @@ public class DetailActivity extends ActionBarActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void retour(View view) {
+        finalTime = mySound.getDuration();
+        if ((timeElapsed - forwardTime) > 0) {
+            timeElapsed = timeElapsed - forwardTime;
+            mySound.seekTo((int) timeElapsed);
+        }
+        else {
+            mySound.seekTo((int) 0);
+        }
+    }
+
+    public void play(View view) {
+        mySound.start();
+        timeElapsed = mySound.getCurrentPosition();
+    }
+
+    public void pause(View view) {
+        mySound.pause();
+    }
+
+
+    public void avancer(View view) {
+        finalTime = mySound.getDuration();
+        if ((timeElapsed + forwardTime) <= finalTime) {
+            timeElapsed = timeElapsed + forwardTime;
+            mySound.seekTo((int) timeElapsed);
+        }
+
     }
 }
