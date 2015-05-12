@@ -17,6 +17,8 @@ public class ChantApi {
             public class Item {
                 public String href;
                 public String text;
+                public String image;
+                public String description;
             }
         }
     }

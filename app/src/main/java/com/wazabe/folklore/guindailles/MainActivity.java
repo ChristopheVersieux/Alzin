@@ -63,13 +63,13 @@ public class MainActivity extends MaterialNavigationDrawer implements MaterialAc
 
         section = this.newSection(getResources().getString(R.string.section2),newInstance("Cercle.txt"));
         this.addSection(section);
-        section = this.newSection(getResources().getString(R.string.section4), newInstance("8ym52w3e"));
+        section = this.newSection(getResources().getString(R.string.section4), newInstance("Pennes.txt"));
         this.addSection(section);
-        section = this.newSection(getResources().getString(R.string.section5), newInstance("5ddf2cxm"));
+        section = this.newSection(getResources().getString(R.string.section5), newInstance("Regionales.txt"));
         this.addSection(section);
-        section = this.newSection(getResources().getString(R.string.section6), newInstance("agqu2adi"));
+        section = this.newSection(getResources().getString(R.string.section6), newInstance("sacres.txt"));
         this.addSection(section);
-        section = this.newSection(getResources().getString(R.string.section7), newInstance("cbdl4k22"));
+        section = this.newSection(getResources().getString(R.string.section7), newInstance("bitu.txt"));
         this.addSection(section);
 
         this.addMultiPaneSupport();

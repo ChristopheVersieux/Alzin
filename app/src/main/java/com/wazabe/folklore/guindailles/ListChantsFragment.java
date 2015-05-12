@@ -75,12 +75,12 @@ public class ListChantsFragment extends Fragment {
                                          } else if (api != null && api.results != null && api.results.chants != null) {
                                              getView().findViewById(R.id.container).setVisibility(View.GONE);
                                              for (final ChantApi.Result.Chant chant : api.results.chants) {
-                                                 CustomCard card = new CustomCard(getActivity(), "C'est ici que viendra un petit texte de description");
+                                                 CustomCard card = new CustomCard(getActivity(), chant.item.description);
                                                  CardHeader header = new CardHeader(getActivity());
                                                  header.setTitle(chant.item.text);
                                                  card.addCardHeader(header);
                                                  CardThumbnail thumb = new CardThumbnail(ListChantsFragment.this.getActivity());
-                                                 thumb.setUrlResource("https://umonster.be/static/images/partenaires/2011-2012/Blason-fpms4.jpg");
+                                                 thumb.setUrlResource(chant.item.image);
                                                  card.addCardThumbnail(thumb);
                                                  card.setOnClickListener(new Card.OnCardClickListener() {
                                                      @Override
