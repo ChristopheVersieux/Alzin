@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
@@ -18,6 +19,7 @@ import com.wazabe.folklore.guindailles.bo.ParoleApi;
 public class DetailActivity extends ActionBarActivity {
 
     MediaPlayer mySound;
+    boolean playing=false;
     private int forwardTime = 15000;
     private int timeElapsed = 0, finalTime = 0;
 
@@ -73,13 +75,18 @@ public class DetailActivity extends ActionBarActivity {
         }
     }
 
-    public void play(View view) {
-        mySound.start();
-        timeElapsed = mySound.getCurrentPosition();
-    }
+    public void toggle(View view) {
+        if(playing){
+            ((ImageButton)view).setImageResource(android.R.drawable.ic_media_play);
+            mySound.start();
+            timeElapsed = mySound.getCurrentPosition();
+        }else{
+            ((ImageButton)view).setImageResource(android.R.drawable.ic_media_pause);
+            mySound.pause();
+        }
+        playing=!playing;
 
-    public void pause(View view) {
-        mySound.pause();
+
     }
 
 
