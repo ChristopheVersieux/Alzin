@@ -85,7 +85,7 @@ public class ListChantsFragment extends Fragment {
                                                  card.setOnClickListener(new Card.OnCardClickListener() {
                                                      @Override
                                                      public void onClick(Card card, View view) {
-                                                         startActivity(new Intent(getActivity(), DetailActivity.class).putExtra("url", chant.item.href));
+                                                         startActivity(new Intent(getActivity(), DetailActivity.class).putExtra("url", chant.item.href).putExtra("musique", chant.item.musique).putExtra("img", chant.item.image));
                                                      }
                                                  });
                                                  cards.add(card);

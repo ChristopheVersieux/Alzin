@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
@@ -33,6 +34,10 @@ public class DetailActivity extends ActionBarActivity {
         if (savedInstanceState == null) {
             // everything else that doesn't update UI
         }
+
+        String musique = getIntent().getExtras().getString("musique");
+        String img = getIntent().getExtras().getString("img");
+
         setTitle("Chargement en cours...");
         Ion.with(this)
                 .load("https://www.kimonolabs.com/api/ondemand/480wksdk?apikey=6VWkomxEx2eH0P9zWbDkvYAJQ6g8P3Sd&kimpath3=" + getIntent().getExtras().getString("url").replace("http://www.guindaille-factory.be/chants/view/", ""))
@@ -50,6 +55,8 @@ public class DetailActivity extends ActionBarActivity {
                     }
 
                 });
+
+        Ion.with(this).load(img).intoImageView((ImageView)findViewById(R.id.img));
     }
 
     @Override
