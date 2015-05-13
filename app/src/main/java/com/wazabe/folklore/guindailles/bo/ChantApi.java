@@ -19,6 +19,7 @@ public class ChantApi {
                 public String text;
                 public String image;
                 public String description;
+                public String musique;
             }
         }
     }
