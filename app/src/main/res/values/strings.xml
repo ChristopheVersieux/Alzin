@@ -15,6 +15,10 @@
     <string name="empty">Pas encore de chants dans cette catégorie</string>
     <string name="network">Pas de résultat. Etes vous connecté à Internet?</string>
     <string name="unknown">Une erreur inconnue s\'est produite. Nous mettons tout en oeuvre pour réparer le soucis.</string>
+    <string name="error404">Paroles non trouvées</string>
+    <string name="error404detail">Les paroles sont manquantes sur le serveur. Nous allons y remédier au plus vite</string>
+    <string name="errorgenericdetail">Désolé, une erreurt s\'est produite</string>
+    <string name="errorgeneric">Erreur</string>
 
 
 </resources>
