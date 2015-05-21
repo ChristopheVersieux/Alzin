@@ -26,16 +26,18 @@
                 android:layout_width="match_parent"
                 android:layout_alignBottom="@+id/img"
                 android:background="#55000000"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:id="@+id/player"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageButton
 
                     android:id="@+id/bouttonRetour"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_margin="10dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:adjustViewBounds="true"
                     android:onClick="retour"
                     android:src="@android:drawable/ic_media_previous" />
@@ -47,20 +49,18 @@
 
                 <ImageButton
                     android:id="@+id/bouttonToggle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_margin="10dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:onClick="toggle"
-                    android:src="@android:drawable/ic_media_pause" />
+                    android:src="@android:drawable/ic_media_play" />
 
                 <View android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="10dp"/>
                 <ImageButton
                     android:id="@+id/bouttonAvancer"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_margin="10dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:onClick="avancer"
                     android:src="@android:drawable/ic_media_next" />
 

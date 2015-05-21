@@ -96,23 +96,24 @@ public class DetailActivity extends ActionBarActivity {
         finalTime = mySound.getDuration();
         if ((timeElapsed - forwardTime) > 0) {
             timeElapsed = timeElapsed - forwardTime;
-            mySound.seekTo((int) timeElapsed);
+            mySound.seekTo(timeElapsed);
         }
         else {
-            mySound.seekTo((int) 0);
+            mySound.seekTo(0);
         }
     }
 
     public void toggle(View view) {
+        playing=!playing;
         if(playing){
-            ((ImageButton)view).setImageResource(android.R.drawable.ic_media_play);
+            ((ImageButton)view).setImageResource(android.R.drawable.ic_media_pause);
             mySound.start();
             timeElapsed = mySound.getCurrentPosition();
         }else{
-            ((ImageButton)view).setImageResource(android.R.drawable.ic_media_pause);
+            ((ImageButton)view).setImageResource(android.R.drawable.ic_media_play);
             mySound.pause();
         }
-        playing=!playing;
+
 
 
     }
